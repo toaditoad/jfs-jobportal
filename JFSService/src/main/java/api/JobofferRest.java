@@ -28,6 +28,11 @@ public class JobofferRest {
 		offer2.setDescription("Write your Master Thesis in the development department of Porsche.");
 		offers.add(offer2);
 
+		Joboffer offer3 = new Joboffer();
+		offer3.setTitle("Summer job");
+		offer3.setDescription("Earn money!");
+		offers.add(offer3);
+
 		return offers;
     }
 }
