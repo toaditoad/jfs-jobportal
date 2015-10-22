@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="jfsApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>JfS - work.study.innovate</title>
 
-	<link rel="stylesheet" href="lib/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap-3.3.5/css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="css/mainStyles.css">
-
-	<script src="lib/jquery-2.1.4/jquery-2.1.4.min.js"></script>
-	<script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="app/modules/joboffer/list/create/joboffer-create.css">
 </head>
 <body>
-	<div id="wrapper" class="container-fluid">
-		<img src="img/logo_jfs_slogan.jpg" id="logo" class="img-responsive" alt="JfS work.study.innovate" />
-
-		<div class="jumbotron">
-		  <h1>Welcome to JfS!</h1>
-		  <p>Find the perfect job - work.study.innovate!</p>
+	<nav id="jfs-navbar" class="navbar navbar-default" role="navigation" bs-navbar>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#/">
+				<img alt="JfS work.study.innovate" id="brandlogo" class="img-responsive" src="img/logo_jfs-slogan.png">
+			</a>
 		</div>
+		<ul class="nav navbar-nav">
+			<li data-match-route="/joboffer/list.*"><a href="#/joboffer/list">Job offers</a></li>
+		</ul>
+	</nav>
 
-		<pre>GET: <a href="rest/joboffer">/rest/joboffer</a></pre>
-	</div>
+	<div id="jfs-contentview" ng-view></div>
+
+	<script type="text/javascript" src="vendor/angularjs-1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="vendor/angularjs-1.4.7/angular-route.min.js"></script>
+	<script type="text/javascript" src="vendor/angular-strap-2.3.2/angular-strap.min.js"></script>
+	<script type="text/javascript" src="vendor/angular-strap-2.3.2/angular-strap.tpl.min.js"></script>
+
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/modules/joboffer/list/joboffer-list.js"></script>
+	<script type="text/javascript" src="app/modules/joboffer/list/joboffer-list-service.js"></script>
+	<script type="text/javascript" src="app/modules/joboffer/details/joboffer-details.js"></script>
+	<script type="text/javascript" src="app/modules/joboffer/details/joboffer-details-service.js"></script>
+	<script type="text/javascript" src="app/modules/joboffer/list/create/joboffer-create.js"></script>
 </body>
 </html>

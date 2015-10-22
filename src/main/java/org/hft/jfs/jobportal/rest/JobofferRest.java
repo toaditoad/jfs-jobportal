@@ -29,5 +29,5 @@ public class JobofferRest {
 		offers.add(offer2);
 
 		return offers;
-    }
+	}
 }
